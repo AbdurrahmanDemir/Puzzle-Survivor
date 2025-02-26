@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ea5301a2aed514597fc9f758b950b5, type: 3}
+  m_Name: MissionData
+  m_EditorClassIdentifier: 
+  rewardMilestoneDatas:
+  - icon: {fileID: 4727633781103762509, guid: 5949898c8529c0d4fb11cfe9aa4cc813, type: 3}
+    rewards:
+    - rewardIcon: {fileID: 21300000, guid: 9d911362ef12d4c8a935c7b8e05d7037, type: 3}
+      type: 1
+      amount: 100
+    requiredXp: 100
+  - icon: {fileID: 4727633781103762509, guid: 5949898c8529c0d4fb11cfe9aa4cc813, type: 3}
+    rewards:
+    - rewardIcon: {fileID: 21300000, guid: 14d722e5cb773403aa2415d38bb6ab8e, type: 3}
+      type: 2
+      amount: 20
+    requiredXp: 200
+  - icon: {fileID: 4727633781103762509, guid: 5949898c8529c0d4fb11cfe9aa4cc813, type: 3}
+    rewards:
+    - rewardIcon: {fileID: 21300000, guid: 9d911362ef12d4c8a935c7b8e05d7037, type: 3}
+      type: 1
+      amount: 200
+    requiredXp: 500
+  - icon: {fileID: 4727633781103762509, guid: 5949898c8529c0d4fb11cfe9aa4cc813, type: 3}
+    rewards:
+    - rewardIcon: {fileID: 21300000, guid: 38d138f4bd4964678b146f843d742bd8, type: 3}
+      type: 2
+      amount: 50
+    requiredXp: 700
+  - icon: {fileID: -7986023702553734918, guid: 610aaad2bfc4fc643900084156cf7699, type: 3}
+    rewards:
+    - rewardIcon: {fileID: 21300000, guid: 9d911362ef12d4c8a935c7b8e05d7037, type: 3}
+      type: 1
+      amount: 500
+    - rewardIcon: {fileID: 21300000, guid: 689efe59d306040709a7decf3006a19a, type: 3}
+      type: 2
+      amount: 50
+    requiredXp: 800

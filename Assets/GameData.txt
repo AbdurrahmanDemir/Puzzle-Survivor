@@ -1,0 +1,32 @@
+{
+	"data": {
+		"Demir.MissionSystem.MissionTimer_DailyMissionStartTime": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": \"25.02.2025 12:50:04\"\r\n}"
+		},
+		"Demir.MissionSystem.MissionTimer_DailyMissionEndTime": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": \"26.02.2025 12:50:04\"\r\n}"
+		},
+		"Demir.MissionSystem.MissionManager_MissionDataAmount": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": [\r\n\t\t1,\r\n\t\t1,\r\n\t\t1,\r\n\t\t2,\r\n\t\t5,\r\n\t\t14,\r\n\t\t1,\r\n\t\t1,\r\n\t\t4,\r\n\t\t14,\r\n\t\t14\r\n\t]\r\n}"
+		},
+		"Demir.MissionSystem.MissionManager_MissionClaimedStates": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.Boolean[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": [\r\n\t\ttrue,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\ttrue,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse\r\n\t]\r\n}"
+		},
+		"Demir.MissionSystem.MissionManager_MissionXp": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": 150\r\n}"
+		},
+		"Demir.MissionSystem.MainMissionSlider_MissionLastRewardIndex": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": 1\r\n}"
+		},
+		"Demir.MissionSystem.MainMissionSlider_MissionItemsOpend": {
+			"dataType": "Tabsil.Sijil.SerializableObject`1[[System.Boolean[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+			"value": "{\r\n\t\"myObject\": [\r\n\t\ttrue,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse,\r\n\t\tfalse\r\n\t]\r\n}"
+		}
+	}
+}
