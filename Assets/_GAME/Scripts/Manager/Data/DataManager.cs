@@ -6,18 +6,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-
 
     [Header(" Data ")]
     [SerializeField] private int gold;
     [SerializeField] private int xp;
     [SerializeField] private int energy;
 
-    GameObject popUp;
+    private GameObject popUp;
 
     private void Awake()
     {
@@ -30,8 +28,18 @@ public class DataManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        popUp= GameObject.FindGameObjectWithTag("PopUp");
-        popUp.SetActive(false);
+        // Subscribe to the sceneLoaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Find the popUp GameObject whenever a scene is loaded
+        popUp = GameObject.FindGameObjectWithTag("PopUp");
+        if (popUp != null)
+        {
+            popUp.SetActive(false);
+        }
     }
 
     public bool TryPurchaseGold(int price)
@@ -49,43 +57,43 @@ public class DataManager : MonoBehaviour
         }
         return false;
     }
+
     public void AddGold(int value)
     {
         gold += value;
-
         UpdateGoldText();
-
         SaveData();
     }
+
     public void AddXP(int value)
     {
         xp += value;
-
         UpdateXPText();
-
         SaveData();
     }
+
     private void UpdateGoldText()
     {
         Text coinText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<Text>();
         coinText.text = gold.ToString();
     }
+
     private void UpdateXPText()
     {
         if (SceneManager.GetActiveScene().name == "Menu")
         {
             Text xpText = GameObject.FindGameObjectWithTag("XpText").GetComponent<Text>();
             xpText.text = xp.ToString();
-
         }
-
     }
+
     private void SaveData()
     {
         PlayerPrefs.SetInt("Gold", gold);
         PlayerPrefs.SetInt("XP", xp);
         PlayerPrefs.SetInt("Energy", energy);
     }
+
     private void LoadData()
     {
         if (PlayerPrefs.HasKey("Gold"))
@@ -98,14 +106,9 @@ public class DataManager : MonoBehaviour
             AddEnergy(5);
         }
         xp = PlayerPrefs.GetInt("XP", 0);
-        //sliderXP.maxValue = 500;
-        //sliderXP.value = xp;
-
         energy = PlayerPrefs.GetInt("Energy", energy);
 
-
         Debug.Log("GOLD" + gold + "XP" + xp);
-
 
         SaveData();
         UpdateGoldText();
@@ -113,7 +116,7 @@ public class DataManager : MonoBehaviour
         UpdateEnergyText();
     }
 
-    //energy
+    // Energy
 
     public bool TryPurchaseEnergy(int price)
     {
@@ -130,21 +133,21 @@ public class DataManager : MonoBehaviour
         }
         return false;
     }
+
     private void UpdateEnergyText()
     {
         Text energyText = GameObject.FindGameObjectWithTag("EnergyText").GetComponent<Text>();
         energyText.text = energy.ToString();
     }
+
     public void AddEnergy(int value)
     {
         energy += value;
-
         UpdateEnergyText();
-
         SaveData();
     }
 
-    public void OpenPopUp(GameObject go,string text)
+    public void OpenPopUp(GameObject go, string text)
     {
         if (go.activeSelf)
         {
@@ -159,11 +162,11 @@ public class DataManager : MonoBehaviour
             go.GetComponentInChildren<TextMeshProUGUI>().text = text;
             go.transform.DOScale(Vector3.one, 0.2f)
                 .SetEase(Ease.OutBack)
-                .OnComplete(() => StartCoroutine(ClosePanelAfterDelay(go,1.8f)));
+                .OnComplete(() => StartCoroutine(ClosePanelAfterDelay(go, 1.8f)));
         }
     }
 
-    private IEnumerator ClosePanelAfterDelay(GameObject go,float delay)
+    private IEnumerator ClosePanelAfterDelay(GameObject go, float delay)
     {
         yield return new WaitForSeconds(delay);
         if (go.activeSelf)

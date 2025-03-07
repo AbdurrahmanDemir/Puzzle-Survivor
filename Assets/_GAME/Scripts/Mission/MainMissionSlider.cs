@@ -149,21 +149,16 @@ namespace Demir.MissionSystem
             rewarded?.Invoke(data.RewardMilestoneDatas[index].rewards);
            
         }
-        void PlaceItems()
+        private void PlaceItems()
         {
             float width = itemParent.rect.width;
-            float height = itemParent.rect.height;
-            float spacing = height / (itemParent.childCount - 1);
-            float gap = 200; // Sabit boþluk deðeri
+            float spacing = width / (itemParent.childCount - 1);
 
-            Vector2 startPos = (Vector2)itemParent.position - Vector2.up * height / 2;
+            Vector2 startPosition = (Vector2)itemParent.position - Vector2.right * width / 2;
 
             for (int i = 0; i < itemParent.childCount; i++)
-            {
-                itemParent.GetChild(i).position = startPos + (spacing + gap) * i * Vector2.up;
-            }
+                itemParent.GetChild(i).position = startPosition + spacing * i * Vector2.right;
         }
-
 
 
         void InitSlider()
